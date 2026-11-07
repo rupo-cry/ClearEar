@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.22.1)
+project(clearear)
+find_package(oboe REQUIRED CONFIG)
+add_library(clearear SHARED audio_engine.cpp)
+target_link_libraries(clearear oboe::oboe log android)
